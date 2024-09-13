@@ -6,97 +6,240 @@
     [ ] growth [kg/ha] - biomass nutrients required for crop to growth
     [ ] harvest [kg/ha] - biomass left in soil after harvest
  -->
-    <crop name="BARLEY"     returnPeriod="2">
-        <good>OAT CANOLA MAIZE SOYBEAN SUNFLOWER SUGARBEET BEETROOT</good> <!-- good forecrops -->
-        <bad>BARLEY</bad> <!-- bad forecrops -->
+
+
+    <!-- FIELDFODDERS -->
+
+    <crop name="ALFALFA" returnPeriod="2">
+        <good>STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP MAIZE SILAGEMAIZE RYE WHEAT TRITICALE SPELT LANDSBERGERGEMENGE</good>
+        <bad>CLOVER ALFALFA LUPINE SOYBEAN CANOLA</bad>
     </crop>
-    <crop name="OAT"        returnPeriod="2">
-        <good>WHEAT MAIZE SOYBEAN SUNFLOWER PARSNIP</good>
-        <bad></bad>
+    <crop name="CLOVER" returnPeriod="2">
+        <good>BARLEY POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>WHEAT CLOVER ALFALFA</bad>
     </crop>
-    <crop name="WHEAT"      returnPeriod="2">
-        <good>OAT CANOLA MAIZE SOYBEAN POTATO SUGARBEET BEETROOT</good>
-        <bad>WHEAT</bad>
+    <crop name="SILAGEMAIZE" returnPeriod="1">
+        <good>TRITICALE BETAMAXX LANDSBERGERGEMENGE SUNFLOWER MAISMIX NFIXX SOLARIGOL SUMMERMIX VETCHRYE WINTERMIX</good>
+        <bad>SILAGEMAIZE MAIZE</bad>
     </crop>
-    <crop name="CANOLA"     returnPeriod="3">
-        <good>BARLEY OAT SOYBEAN GRASS</good>
-        <bad>CANOLA SUNFLOWER</bad>
+    <crop name="CLOVERGRASS" returnPeriod="1">
+        <good>CANOLA POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>MAIZE</bad>
     </crop>
-    <crop name="MAIZE"      returnPeriod="1">
-        <good>OAT CANOLA SOYBEAN SUNFLOWER POTATO SUGARBEET GRASS BEETROOT</good>
-        <bad></bad>
+    <crop name="SILAGESORGHUM" returnPeriod="2">
+        <good>ALFALFA CLOVER CLOVERGRASS OAT BEETROOT FODDERBEET SUGARBEET MAIZE LUPINE BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>MAIZE SILAGEMAIZE</bad>
     </crop>
-    <crop name="SOYBEAN"    returnPeriod="2">
-        <good>OAT CANOLA MAIZE SUNFLOWER SORGHUM</good>
-        <bad>SOYBEAN</bad>
-    </crop>
-    <crop name="SUNFLOWER"  returnPeriod="3">
-        <good>SOYBEAN SUGARBEET</good>
-        <bad>CANOLA POTATO</bad>
-    </crop>
-    <crop name="POTATO"     returnPeriod="3">
-        <good>CANOLA</good>
-        <bad>POTATO</bad>
-    </crop>
-    <crop name="SUGARBEET"  returnPeriod="3">
-        <good>BARLEY OAT WHEAT SOYBEAN</good>
-        <bad>CANOLA MAIZE SUGARBEET BEETROOT</bad>
-    </crop>
-    <crop name="POPLAR"     returnPeriod="1">
+    <crop name="VETCHRYE" returnPeriod="3">
         <good></good>
         <bad></bad>
-    </crop>
-    <crop name="GRASS"      returnPeriod="1">
-        <good>OAT SUNFLOWER GRASS MEADOW</good>
-        <bad></bad>
-    </crop>
-    <crop name="SUGARCANE"  returnPeriod="2">
-        <good></good>
-        <bad></bad>
-    </crop>
-    <crop name="COTTON"     returnPeriod="2">
-        <good></good>
-        <bad>COTTON</bad>
-    </crop>
-    <crop name="SORGHUM"    returnPeriod="2">
-        <good>SOYBEAN SUNFLOWER</good>
-        <bad>SORGHUM</bad>
     </crop>
 
-    <crop name="MEADOW"     returnPeriod="1" enabled="false">
-        <good>GRASS MEADOW</good>
+
+    <!-- GRAINS -->
+
+    <crop name="BARLEY" returnPeriod="2">
+        <good>POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WINTERBARLEY WINTERWHEAT ALFALFA CLOVER CLOVERGRASS</bad>
+    </crop>
+    <crop name="WINTERBARLEY" returnPeriod="2">
+        <good>POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT OAT BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WINTERBARLEY WINTERWHEAT ALFALFA CLOVER CLOVERGRASS</bad>
+    </crop>
+    <crop name="WHEAT" returnPeriod="3">
+        <good>BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT POTATO STARCHPOTATO ALFALFA CLOVER CLOVERGRASS VETCHRYE LUPINE MAIZE SOYBEAN OAT BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WHEAT WINTERWHEAT</bad>
+    </crop>  
+    <crop name="WINTERWHEAT" returnPeriod="2">
+        <good>TRITICALE BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT POTATO ALFALFA CLOVER CLOVERGRASS VETCHRYE LUPINE SOYBEAN LINSEED CANOLA BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WINTERBARLEY WHEAT WINTERWHEAT STARCHPOTATO SUGARBEET FODDERCARROT</bad>
+    </crop>
+    <crop name="MAIZE" returnPeriod="1">
+        <good>TRITICALE BEETROOT SUGARBEET FODDERBEET SUNFLOWER POTATO STARCHPOTATO ALFALFA CLOVER CLOVERGRASS PASTUREGRASS MEADOW VETCHRYE LUPINE SOYBEAN BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>SILAGEMAIZE</bad>
+    </crop>
+    <crop name="OAT" returnPeriod="2">
+        <good>POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT ALFALFA CLOVER CLOVERGRASS VETCHRYE LUPINE SOYBEAN MAIZE BARLEY RYE BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX PARSNIP</good>
+        <bad>OAT</bad>
+    </crop>
+    <crop name="RYE" returnPeriod="2">
+        <good>SOYBEAN SUNFLOWER LUPINE POTATO VETCHRYE BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>STARCHPOTATO</bad>
+    </crop>
+    <crop name="SORGHUM" returnPeriod="2">
+        <good>OAT BEETROOT FODDERBEET SUGARBEET MAIZE SILAGEMAIZE LUPINE BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>MAIZE SILAGEMAIZE</bad>
+    </crop>
+    <crop name="SPELT" returnPeriod="2">
+        <good>POTATO STARCHPOTATO SUGARBEET FODDERBEET LUPINE ALFALFA CLOVER CLOVERGRASS PASTUREGRASS BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WINTERBARLEY WHEAT WINTERWHEAT OAT TRITICALE RYE</bad>
+    </crop>
+    <crop name="TRITICALE" returnPeriod="2">
+        <good>CANOLA SORGHUM SOYBEAN SUNFLOWER ALFALFA FODDERCARROT FODDERBEET BETAMAXX LANDSBERGERGEMENGE MAISMIX NFIXX SOLARIGOL SUMMERMIX WINTERMIX</good>
+        <bad>BARLEY WINTERBARLEY WHEAT WINTERWHEAT OAT RYE</bad>
+    </crop>
+
+
+    <!-- GRASSES -->
+
+    <crop name="FIELDGRASS" returnPeriod="1">
+        <good>VETCHRYE SOYBEAN LUPINE CANOLA POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
         <bad></bad>
     </crop>
+    <crop name="GRASS" returnPeriod="1">
+        <good>CANOLA SOYBEAN LUPINE POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>MAIZE</bad>
+    </crop>
+    <crop name="HORSEGRASS" returnPeriod="1">
+        <good>CANOLA POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>MAIZE</bad>
+    </crop>
+    <crop name="MEADOW" returnPeriod="1">
+        <good>LUPINE SOYBEAN CANOLA POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>MAIZE CLOVER ALFALFA</bad>
+    </crop>
+    <crop name="PASTUREGRASS" returnPeriod="1">
+        <good>CANOLA LUPINE CLOVER SOYBEAN POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP</good>
+        <bad>MAIZE</bad>
+    </crop>
+    <crop name="HERBGRASS" returnPeriod="1">
+        <good>CANOLA GRASS FIELDGRASS HORSEGRASS PASTUREGRASS POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT PARSNIP </good>
+        <bad>MAIZE CLOVER ALFALFA</bad>
+    </crop>
+
+
+    <!-- GREENINGS -->
+
+    <crop name="SUMMERMIX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="WINTERMIX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="FLOWERMIX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="MUSTARD" returnPeriod="3">
+        <good>POTATO STARCHPOTATO CLOVER SOYBEAN VETCHRYE TRITICALE WINTERBARLEY</good>
+        <bad>BEETROOT SUGARBEET FODDERBEET MUSTARD LINSEED OILSEEDRADISH</bad>
+    </crop>
+    <crop name="MAISMIX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="OILSEEDRADISH" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="BETAMAXX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="NFIXX" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="SOLARIGOL" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+    <crop name="LANDSBERGERGEMENGE" returnPeriod="3">
+        <good></good>
+        <bad></bad>
+    </crop>
+
+
+    <!-- LEGUMES -->
+
+    <crop name="SOYBEAN" returnPeriod="3">
+        <good>OAT CANOLA SUNFLOWER SORGHUM MAIZE CARROT FODDERCARROT POTATO STARCHPOTATO SUMMERMIX</good>
+        <bad>LUPINE SOYBEAN CLOVER ALFALFA CLOVERGRASS</bad>
+    </crop>
+    <crop name="LUPINE" returnPeriod="3">
+        <good>TRITICALE SPELT WHEAT MAIZE CARROT FODDERCARROT POTATO STARCHPOTATO SUMMERMIX</good>
+        <bad>LUPINE CLOVER ALFALFA CLOVERGRASS</bad>
+    </crop>
+
+
+    <!-- OILSEEDS -->
+
+    <crop name="CANOLA" returnPeriod="3">
+        <good>TRITICALE ALFALFA CLOVER CLOVERGRASS VETCHRYE POTATO BEETROOT GRASS CLOVERGRASS PASTUREGRASS MEADOW WINTERMIX LANDSBERGERGEMENGE FLOWERMIX NFIXX SOLARIGOL WINTERBARLEY WINTERWHEAT</good>
+        <bad>LINSEED MUSTARD CANOLA SUNFLOWER OILSEEDRADISH</bad>
+    </crop>
+    <crop name="SUNFLOWER" returnPeriod="3">
+        <good>BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT POTATO STARCHPOTATO LUPINE SOYBEAN</good>
+        <bad>LINSEED SUNFLOWER MUSTARD CANOLA</bad>
+    </crop>
+    <crop name="LINSEED" returnPeriod="2">
+        <good>BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT POTATO STARCHPOTATO TRITICALE OAT WINTERWHEAT</good>
+        <bad>LINSEED</bad>
+    </crop>
+
+
+    <!-- SEEDBOXES -->
+
+    <crop name="ONION" returnPeriod="3">
+        <good>CLOVER MAIZE VETCHRYE RYE WHEAT WINTERWHEAT</good>
+        <bad>ONION FODDERCARROT POTATO STARCHPOTATO BEETROOT</bad>
+    </crop>
+    <crop name="SUGARBEET" returnPeriod="3">
+        <good>VETCHRYE POTATO WINTERWHEAT WINTERBARLEY RYE TRITICALE LUPINE SUNFLOWER SOYBEAN BETAMAXX LANDSBERGERGEMENGE NFIXX SOLARIGOL OILSEEDRADISH</good>
+        <bad>MAIZE CANOLA SUGARBEET FODDERBEET CLOVERGRASS GRASS HERBGRASS HORSEGRASS PASTUREGRASS FIELDGRASS</bad>
+    </crop>
+    <crop name="FODDERBEET" returnPeriod="3">
+        <good>SUNFLOWER POTATO STARCHPOTATO VETCHRYE ALFALFA CLOVER CLOVERGRASS OILSEEDRADISH</good>
+        <bad>MUSTARD CANOLA MAIZE</bad>
+    </crop>
+    <crop name="CARROT" returnPeriod="2">
+        <good>MAIZE ONION LUPINE SOYBEAN MUSTARD CANOLA</good>
+        <bad>CARROT FODDERCARROT PARSNIP POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET</bad>
+    </crop>
+    <crop name="FODDERCARROT" returnPeriod="3">
+        <good>LUPINE SOYBEAN CLOVER WINTERWHEAT WINTERBARLEY RYE TRITICALE</good>
+        <bad>CARROT FODDERCARROT PARSNIP POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET</bad>
+    </crop>
+    <crop name="BEETROOT" returnPeriod="3">
+        <good>TRITICALE BARLEY WINTERBARLEY WHEAT WINTERWHEAT OAT RYE MAIZE ONION MUSTARD ALFALFA CLOVER CLOVERGRASS VETCHRYE NFIXX BETAMAXX OILSEEDRADISH</good>
+        <bad>SUGARBEET FODDERBEET CANOLA CARROT FODDERCARROT POTATO STARCHPOTATO</bad>
+    </crop>
+    <crop name="PARSNIP" returnPeriod="2">
+        <good>ONION BARLEY WINTERBARLEY WHEAT WINTERWHEAT</good>
+        <bad>POTATO STARCHPOTATO BEETROOT SUGARBEET FODDERBEET CARROT FODDERCARROT</bad>
+    </crop>
+
+
+    <!-- SEEDPALLETS -->
+
+    <crop name="POTATO" returnPeriod="3">
+        <good>ALFALFA CLOVER CLOVERGRASS SUNFLOWER VETCHRYE MUSTARD LUPINE CANOLA WINTERMIX LANDSBERGERGEMENGE SOLARIGOL OILSEEDRADISH</good>
+        <bad>MAIZE SILAGEMAIZE POTATO STARCHPOTATO</bad>
+    </crop>
+    <crop name="STARCHPOTATO" returnPeriod="3">
+        <good>ALFALFA CLOVER CLOVERGRASS VETCHRYE MUSTARD LUPINE WINTERMIX SOLARIGOL OILSEEDRADISH</good>
+        <bad>MAIZE SILAGEMAIZE POTATO STARCHPOTATO</bad>
+    </crop>
+    
+
+    <!-- OTHER -->
+
+    <crop name="POPLAR" returnPeriod="1">
+        <good></good>
+        <bad></bad>
+    </crop>    
+
 
     <!-- CR IS DISABLED
-    <crop name="OILSEEDRADISH" returnPeriod="2" enabled="false"/>
+    <crop name="SUGARCANE" returnPeriod="2" enabled="false"/>
+    <crop name="COTTON" returnPeriod="2" enabled="false"/>
     <crop name="GRAPE"         returnPeriod="1" enabled="false"/>
     <crop name="OLIVE"         returnPeriod="1" enabled="false"/>
     -->
 
-    <!-- ADDITIONAL CROPS -->
-    <!-- <crop name="RYE"       returnPeriod="2"/> -->
-    <!-- <crop name="TRITICALE" returnPeriod="2"/> -->
-    <!-- <crop name="SPELT"     returnPeriod="2"/> -->
-    <!-- <crop name="ALFALFA"   returnPeriod="1"/> -->
-    <crop name="ONION"     returnPeriod="3">
-        <good>CANOLA CARROT SUGARBEET WHEAT BARLEY MAIZE OAT</good>
-        <bad>ONION POTATO</bad>        
-    </crop>
-    <crop name="CARROT"    returnPeriod="2">
-        <good>MAIZE ONION WHEAT BARLEY OAT</good>
-        <bad>SUGARBEET CARROT POTATO</bad>
-    </crop>
-    
-    <crop name="BEETROOT"    returnPeriod="3">
-        <good>BARLEY OAT WHEAT SOYBEAN</good>
-        <bad>CANOLA MAIZE SUGARBEET BEETROOT</bad>
-    </crop>
-    
-    <crop name="PARSNIP"    returnPeriod="2">
-        <good>MAIZE ONION WHEAT BARLEY OAT</good>
-        <bad>SUGARBEET CARROT POTATO PARSNIP</bad>
-    </crop>
+    <!-- ADDITIONAL CROPS -->    
     <!-- <crop name="MILLET"    returnPeriod="2"/> -->
     <!-- <crop name="RICE"      returnPeriod="1"/> -->
     
